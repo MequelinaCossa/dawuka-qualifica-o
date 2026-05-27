@@ -1904,3 +1904,34 @@ footer{
     height: 100%;
     object-fit: contain;
 }
+
+/* =========================
+   RESPONSIVIDADE NAVBAR
+========================= */
+
+/* TABLET */
+@media (max-width: 992px) {
+
+    .navbar {
+        padding: 10px 15px;
+        gap: 15px;
+    }
+
+    .nav-links {
+        display: none; /* esconde menu */
+    }
+
+    .call-now {
+        display: none; /* simplifica header */
+    }
+
+    .header-btn {
+        padding: 10px 14px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .logo-img {
+        height: 60px;
+    }
+}
