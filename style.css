@@ -1935,3 +1935,85 @@ footer{
         height: 60px;
     }
 }
+
+/* =============================================
+   ADIÇÕES AO FORMULÁRIO — campos visão
+============================================= */
+
+/* Divisor de secção dentro do grid */
+.qf-section-divider {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.qf-section-divider span {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    white-space: nowrap;
+}
+
+.qf-section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+/* Sub-grid de 2 colunas para os campos da visão */
+.qf-visao-grid {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 28px;
+}
+
+.qf-visao-grid .qf-group textarea {
+    min-height: 100px;
+}
+
+/* Botão ocupa a linha toda */
+.qual-action-col {
+    grid-column: 1 / -1;
+    padding-top: 8px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .qf-visao-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.process-list {
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.process-list li {
+    color: #bbb;
+    font-size: 12px;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.process-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 800;
+    font-size: 11px;
+}
+.gold-list .process-list li {
+    color: var(--gold);
+}

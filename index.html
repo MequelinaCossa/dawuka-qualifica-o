@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Construtora Premium</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -28,11 +29,11 @@
           </div>
 
             <div class="nav-links">
-                <a href="#">INÍCIO</a>
-                <a href="#">SOBRE</a>
-                <a href="#">PROJETOS</a>
-                <a href="#">PROCESSO</a>
-                <a href="#">CONTACTO</a>
+                <a href="#inicio">INÍCIO</a>
+                <a href="#sobre">SOBRE</a>
+                <a href="#projectos">PROJECTOS</a>
+                <a href="#processo">PROCESSO</a>
+                <a href="#contacto">CONTACTO</a>
             </div>
 
                   <div class="call-now">
@@ -50,7 +51,7 @@
 
 </div>
 
-            <a href="#formulario" class="header-btn">
+            <a href="#contacto" class="header-btn">
                 SOLICITAR ANÁLISE
             </a>
 
@@ -61,7 +62,7 @@
 
     <!-- HERO -->
 
-    <section class="hero">
+    <section class="hero" id="inicio">
 
         <div class="container">
 
@@ -85,14 +86,14 @@
 
                 <div class="hero-buttons">
 
-                    <a href="#formulario" class="btn-primary">
+                   <a href="#contacto" class="btn-primary">
                         QUERO UMA ANÁLISE DO MEU PROJECTO
                     </a>
 
-                  <a href="#" class="btn-outline">
-                      <i class="fa-brands fa-whatsapp"></i>
-                      FALAR COM CONSULTOR
-                  </a>
+                <a href="https://wa.me/258841234567?text=Olá,%20quero%20uma%20análise%20do%20meu%20projecto" target="_blank" class="btn-outline">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    FALAR COM CONSULTOR
+                </a>
 
                 </div>
 
@@ -154,7 +155,7 @@
 
     <!-- ABOUT -->
 
-  <section class="about">
+  <section class="about" id="sobre">
 
     <div class="container">
 
@@ -225,81 +226,83 @@
 
     <!-- PROCESS -->
 
-    <section class="process">
-
+ <section class="process" id="processo">
     <div class="container">
 
         <h2 class="section-title">
             Como estruturamos o seu
-            <span>Projeto Arquitetônico</span>
+            <span>Projecto Arquitectónico</span>
         </h2>
 
         <div class="process-grid">
 
             <div class="process-card">
                 <div class="top-line"></div>
-
                 <div class="number">1</div>
-
                 <h3>Reunião de Alinhamento</h3>
-
-                <p>
-                    Entendemos os objetivos, visão, orçamento e expectativas do cliente antes de qualquer desenho.
-                </p>
+                <p>Entendemos os objectivos, visão, orçamento, estilo e expectativas do cliente antes de qualquer desenho.</p>
             </div>
 
             <div class="process-card">
                 <div class="top-line"></div>
-
                 <div class="number">2</div>
-
                 <h3>Visita ao Terreno</h3>
-
-                <p>
-                    Fazemos análise técnica do terreno para avaliar condições, acessos e viabilidade construtiva.
-                </p>
+                <p>Fazemos uma análise técnica do terreno para avaliar:</p>
+                <ul class="process-list">
+                    <li>Condições do local</li>
+                    <li>Acessos</li>
+                    <li>Topografia</li>
+                    <li>Viabilidade construtiva</li>
+                    <li>Potencial do investimento</li>
+                </ul>
             </div>
 
             <div class="process-card">
                 <div class="top-line"></div>
-
                 <div class="number">3</div>
-
                 <h3>Estudo de Viabilidade</h3>
-
-                <p>
-                    Analisamos regulamentos municipais, índices de construção e limitações legais.
-                </p>
+                <p>Analisamos:</p>
+                <ul class="process-list">
+                    <li>Regulamentos municipais</li>
+                    <li>Índices de construção</li>
+                    <li>Limitações legais</li>
+                    <li>Possibilidades técnicas do terreno</li>
+                </ul>
             </div>
 
             <div class="process-card">
                 <div class="top-line"></div>
-
                 <div class="number">4</div>
-
-                <h3>Desenvolvimento do Projeto</h3>
-
-                <p>
-                    Criamos o projeto arquitetônico com participação ativa do cliente em todas fases.
-                </p>
+                <h3>Desenvolvimento do Projecto</h3>
+                <p>Começamos a elaborar o projecto arquitectónico com participação activa do cliente em todas as fases. O cliente acompanha:</p>
+                <ul class="process-list">
+                    <li>Layout</li>
+                    <li>Fachadas</li>
+                    <li>Divisão dos espaços</li>
+                    <li>Ajustes</li>
+                    <li>Aprovação de cada etapa</li>
+                </ul>
             </div>
 
-            <div class="process-card">
+           <div class="process-card gold-list">
                 <div class="top-line"></div>
-
                 <div class="number">5</div>
-
                 <h3>Entrega Técnica Completa</h3>
-
-                <p>
-                    Entregamos documentação completa, orçamento e acompanhamento técnico da obra.
-                </p>
+                <p>O projecto inclui:</p>
+                <ul class="process-list">
+                    <li>Memória Descritiva e Justificativa</li>
+                    <li>Memória Arquitectónica</li>
+                    <li>Memória Hidráulica</li>
+                    <li>Memória Eléctrica</li>
+                    <li>Memória Estrutural</li>
+                    <li>Orçamento do Projecto</li>
+                    <li>Assinaturas Técnicas</li>
+                    <li>Termo de Responsabilidade</li>
+                </ul>
             </div>
 
         </div>
-
     </div>
-
 </section>
 
 <section class="execucao">
@@ -506,7 +509,7 @@
 <!-- =============================================
    SECTION 2: ALGUNS TIPOS DE PROJECTOS
 ============================================= -->
-<section class="projectos">
+<section class="projectos" id="projectos">
     <div class="projectos-inner">
  
         <!-- LADO ESQUERDO -->
@@ -651,141 +654,257 @@
     </div>
 </section>
 
-<section class="qualification" id="formulario">
+<form id="contact-form">
+
+<section class="qualification" id="contacto">
     <div class="container">
- 
+
         <div class="section-header">
             <h2>SOLICITE UMA <span>ANÁLISE</span> DO SEU PROJECTO</h2>
         </div>
-        <p class="qual-sub">Preenchemos vagas limitadas mensalmente. Por isso analisamos cada projecto antes de avançar.</p>
- 
+
+        <p class="qual-sub">
+            Preenchemos vagas limitadas mensalmente. Por isso analisamos cada projecto antes de avançar.
+        </p>
+
         <div class="qual-form-box">
- 
-            <!-- ESQUERDA: dados básicos -->
+
+            <!-- ESQUERDA -->
             <div class="qual-left">
-                <div class="qual-left-title">Dados Básicos</div>
- 
+
                 <div class="qual-field-group">
                     <label>Nome completo <span>*</span></label>
-                    <input type="text" placeholder="Digite seu nome">
+                    <input type="text" name="nome" placeholder="Digite seu nome">
                 </div>
- 
+
                 <div class="qual-field-group">
                     <label>Número de telefone <span>*</span></label>
-                    <input type="tel" placeholder="Ex: +258 84 000 0000">
+                    <input type="tel" name="telefone" placeholder="Ex: +258 84 000 0000">
                 </div>
- 
+
                 <div class="qual-field-group">
                     <label>E-mail <span>*</span></label>
-                    <input type="email" placeholder="Digite seu e-mail">
+                    <input type="email" name="email" placeholder="Digite seu e-mail">
                 </div>
+
             </div>
- 
-            <!-- DIREITA: dados do projecto -->
+
+            <!-- DIREITA -->
             <div class="qual-right">
-                <div class="qual-right-title">Sobre o Projecto</div>
- 
-                <!-- Linha 1 -->
+
                 <div class="qf-group">
-                    <label>1. Tipo de projecto <span>*</span></label>
-                    <select>
+                    <label>1. Qual serviço pretende contratar? <span>*</span></label>
+                    <select name="servico">
                         <option value="">Selecione...</option>
-                        <option>Residencial</option>
-                        <option>Comercial</option>
-                        <option>Industrial</option>
-                        <option>Misto</option>
+                        <option>Projecto Arquitectónico</option>
+                        <option>Projecto + Construção</option>
+                        <option>Orçamento da Obra apenas</option>
+                        <option>Fiscalização da Obra</option>
                     </select>
                 </div>
- 
+
                 <div class="qf-group">
-                    <label>2. Terreno disponível?</label>
-                    <select>
+                    <label>2. Que tipo de projecto pretende desenvolver? <span>*</span></label>
+                    <select name="tipo_projecto">
+                        <option value="">Selecione...</option>
+                        <option>Moradia Unifamiliar</option>
+                        <option>Moradia Plurifamiliar</option>
+                        <option>Condomínio</option>
+                        <option>Edifício Comercial</option>
+                        <option>Reabilitação/Ampliação</option>
+                        <option>Outro</option>
+                    </select>
+                </div>
+
+                <div class="qf-group">
+                    <label>3. Quantos pisos pretende construir?</label>
+                    <select name="pisos">
+                        <option value="">Selecione...</option>
+                        <option>Térreo</option>
+                        <option>Térreo + 1 Andar</option>
+                        <option>Térreo + 2 Andares</option>
+                        <option>Térreo + 3 Andares ou mais</option>
+                    </select>
+                </div>
+
+                <div class="qf-group">
+                    <label>4. Já possui terreno?</label>
+                    <select name="terreno">
                         <option value="">Selecione...</option>
                         <option>Sim</option>
                         <option>Não</option>
-                        <option>Em processo</option>
                     </select>
                 </div>
- 
+
                 <div class="qf-group">
-                    <label>3. Localização do terreno</label>
-                    <input type="text" placeholder="Digite a localização">
+                    <label>5. Localização do terreno</label>
+                    <input type="text" name="localizacao" placeholder="Digite a localização">
                 </div>
- 
-                <!-- Linha 2 -->
+
                 <div class="qf-group">
-                    <label>4. Prazo desejado para iniciar</label>
-                    <select>
+                    <label>6. Descreva a compartimentação do seu projecto</label>
+                    <input type="text" name="compartimentacao" placeholder="Ex: Quantidade de quartos, salas, área de lazer, etc.">
+                </div>
+
+                <div class="qf-group">
+                    <label>7. Qual o orçamento previsto para o PROJECTO?</label>
+                    <select name="orcamento_projeto">
                         <option value="">Selecione...</option>
-                        <option>Imediato</option>
-                        <option>1 a 3 meses</option>
-                        <option>3 a 6 meses</option>
-                        <option>Mais de 6 meses</option>
+                        <option>Menos de 20.000 MT</option>
+                        <option>20.000 MT – 30.000 MT</option>
+                        <option>30.000 MT – 50.000 MT</option>
+                        <option>50.000 MT – 100.000 MT</option>
+                        <option>Acima de 100.000 MT</option>
                     </select>
                 </div>
- 
+
                 <div class="qf-group">
-                    <label>5. Orçamento definido?</label>
-                    <select>
+                    <label>8. Qual o orçamento previsto para a OBRA?</label>
+                    <select name="orcamento_obra">
                         <option value="">Selecione...</option>
-                        <option>Sim, definido</option>
+                        <option>Menos de 1.000.000 MT</option>
+                        <option>1.000.000 MT – 2.000.000 MT</option>
+                        <option>2.000.000 MT – 3.500.000 MT</option>
+                        <option>3.500.000 MT – 5.000.000 MT</option>
+                        <option>Acima de 5.000.000 MT</option>
+                    </select>
+                </div>
+
+                <div class="qf-group">
+                    <label>9. Já possui o investimento necessário para o Projecto?</label>
+                    <select name="investimento_projeto">
+                        <option value="">Selecione...</option>
+                        <option>Sim</option>
                         <option>Parcialmente</option>
-                        <option>Ainda não</option>
+                        <option>Ainda não tenho o investimento</option>
                     </select>
                 </div>
- 
+
                 <div class="qf-group">
-                    <label>6. Nível de urgência</label>
-                    <select>
+                    <label>10. Já possui o investimento necessário para a Construção/Obra?</label>
+                    <select name="investimento_obra">
                         <option value="">Selecione...</option>
-                        <option>Alta</option>
-                        <option>Média</option>
-                        <option>Baixa</option>
+                        <option>Sim</option>
+                        <option>Parcialmente</option>
+                        <option>Ainda não tenho o investimento</option>
                     </select>
                 </div>
- 
-                <!-- Linha 3 -->
+
                 <div class="qf-group">
-                    <label>7. Pretende</label>
-                    <select>
+                    <label>11. Qual o nível de urgência?</label>
+                    <select name="urgencia">
                         <option value="">Selecione...</option>
-                        <option>Projecto + Execução</option>
-                        <option>Só Projecto</option>
-                        <option>Só Execução</option>
-                        <option>Consultoria</option>
+                        <option>Alto</option>
+                        <option>Médio</option>
+                        <option>Baixo</option>
                     </select>
                 </div>
- 
+
                 <div class="qf-group">
-                    <label>8. Investimento previsto</label>
-                    <select>
+                    <label>12. Quando pretende iniciar?</label>
+                    <select name="inicio">
                         <option value="">Selecione...</option>
-                        <option>Até 100.000 USD</option>
-                        <option>100K – 300K USD</option>
-                        <option>300K – 500K USD</option>
-                        <option>Acima de 500K USD</option>
+                        <option>Imediatamente</option>
+                        <option>1 a 2 meses</option>
+                        <option>3 a 4 meses</option>
+                        <option>Ainda em fase de preparação</option>
                     </select>
                 </div>
- 
-                <!-- Textarea + Botão -->
+
+                <!-- VISÃO -->
+                <div class="qf-group">
+                    <label>13. O que motivou a realização deste projecto neste momento?</label>
+                    <textarea name="motivacao"></textarea>
+                </div>
+
+                <div class="qf-group">
+                    <label>14. Como imagina o resultado final deste projecto?</label>
+                    <textarea name="visao_final"></textarea>
+                </div>
+
+                <div class="qf-group">
+                    <label>15. O que seria indispensável para considerar este projecto perfeito para si?</label>
+                    <textarea name="indispensavel"></textarea>
+                </div>
+
+                <div class="qf-group">
+                    <label>16. Porque acha importante contratar uma empresa para fazer esse trabalho?</label>
+                    <textarea name="porque_empresa"></textarea>
+                </div>
+
+                <div class="qf-group">
+                    <label>17. Quais são as maiores preocupações que tem em relação à construção ou desenvolvimento deste projecto?</label>
+                    <textarea name="preocupacoes"></textarea>
+                </div>
+
+                <div class="qf-group">
+                    <label>18. O que gostaria de evitar durante este processo?</label>
+                    <textarea name="evitar"></textarea>
+                </div>
+
+                <div class="qf-group">
+                    <label>19. Se este projecto fosse executado exactamente como imagina, o que isso representaria para si?</label>
+                    <textarea name="impacto"></textarea>
+                </div>
+
+                <div class="qf-group">
+                    <label>20. Existe alguma informação importante sobre este projecto que gostaria que a nossa equipa soubesse antes da análise?</label>
+                    <textarea name="info_extra"></textarea>
+                </div>
+
                 <div class="qual-action-col">
-                    <div class="qf-group">
-                        <label>9. Por que este projecto é importante agora?</label>
-                        <textarea placeholder="Fale um pouco sobre a sua necessidade e objectivos..."></textarea>
-                    </div>
-                    <button class="submit-btn">
+                   <button type="submit" class="submit-btn" id="submitBtn">
                         QUERO SER ANALISADO PELA EQUIPA
-                        <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
- 
+
             </div>
         </div>
- 
+
     </div>
 </section>
 
-
+</form>
+<!-- MODAL SUCESSO -->
+<div id="formSuccess" style="
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.75);
+    z-index:9999;
+    align-items:center;
+    justify-content:center;
+">
+    <div style="
+        background:#fff;
+        border-radius:14px;
+        padding:50px 40px;
+        max-width:460px;
+        width:90%;
+        text-align:center;
+        position:relative;
+    ">
+        <div style="font-size:52px; margin-bottom:16px;">✅</div>
+        <h3 style="font-size:22px; font-weight:800; color:#111; margin-bottom:12px;">
+            Solicitação enviada!
+        </h3>
+        <p style="color:#666; font-size:14px; line-height:1.7; margin-bottom:30px;">
+            A nossa equipa irá analisar o seu projecto e entrar em contacto em breve.
+        </p>
+        <button onclick="document.getElementById('formSuccess').style.display='none'" style="
+            background:#d4a437;
+            color:#000;
+            border:none;
+            padding:14px 32px;
+            font-weight:800;
+            font-size:13px;
+            border-radius:8px;
+            cursor:pointer;
+            text-transform:uppercase;
+            letter-spacing:0.5px;
+        ">OK</button>
+    </div>
+</div>
 
  <footer>
     <div class="footer-top-bar"></div>
@@ -838,9 +957,20 @@
             </div>
  
             <div class="social-links">
-                <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
-            </div>
+    <a href="https://www.facebook.com/p/Dawuka-Constru%C3%A7%C3%B5es-SU-Lda-61573400972341/" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="social-btn">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://instagram.com/dawukaconstrucoes_sulda" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="social-btn">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
         </div>
  
         <!-- COL 3: HORÁRIO -->
