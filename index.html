@@ -20,45 +20,54 @@
 <body>
 
     <!-- HEADER -->
+<header>
+    <div class="container navbar">
 
-    <header>
-        <div class="container navbar">
+        <div class="logo">
+            <img src="assets/logo7.png" alt="Dawuka Construções" class="logo-img">
+        </div>
 
-           <div class="logo">
-              <img src="assets/logo7.png" alt="Dawuka Construções" class="logo-img">
-          </div>
+        <div class="nav-links">
+            <a href="#inicio">INÍCIO</a>
+            <a href="#sobre">SOBRE</a>
+            <a href="#projectos">PROJECTOS</a>
+            <a href="#processo">PROCESSO</a>
+            <a href="#contacto">CONTACTO</a>
+        </div>
 
-            <div class="nav-links">
-                <a href="#inicio">INÍCIO</a>
-                <a href="#sobre">SOBRE</a>
-                <a href="#projectos">PROJECTOS</a>
-                <a href="#processo">PROCESSO</a>
-                <a href="#contacto">CONTACTO</a>
-            </div>
-
-                  <div class="call-now">
-              <span class="call-icon">
-                  <i class="fa-solid fa-phone"></i>
-              </span>
-
+        <div class="call-now">
+            <span class="call-icon">
+                <i class="fa-solid fa-phone"></i>
+            </span>
             <div class="call-info">
                 <span class="call-title">Ligar Agora</span>
-
-                <span class="call-number">
-                    87 036 4269 | 84 364 2692
-                </span>
+                <span class="call-number">87 036 4269 | 84 364 2692</span>
             </div>
-
-</div>
-
-            <a href="#contacto" class="header-btn">
-                SOLICITAR ANÁLISE
-            </a>
-
-             
-
         </div>
-    </header>
+
+        <a href="#contacto" class="header-btn">
+            SOLICITAR ANÁLISE
+        </a>
+
+        <!-- HAMBURGER (mobile) -->
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <!-- MENU MOBILE -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="#inicio" onclick="toggleMenu()">INÍCIO</a>
+        <a href="#sobre" onclick="toggleMenu()">SOBRE</a>
+        <a href="#projectos" onclick="toggleMenu()">PROJECTOS</a>
+        <a href="#processo" onclick="toggleMenu()">PROCESSO</a>
+        <a href="#contacto" onclick="toggleMenu()">SOLICITAR ANÁLISE</a>
+    </nav>
+
+</header>
 
     <!-- HERO -->
 
@@ -196,23 +205,23 @@
             <!-- IMAGENS -->
             <div class="about-images">
 
-                <div class="image-card">
-                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1000">
-                    <span>ESTRATÉGIA</span>
-                </div>
+             <div class="image-card">
+                <img src="assets/Entrega Final.jpg.jpeg">
+                <span>ESTRATÉGIA</span>
+            </div>
+
+            <div class="image-card">
+                <img src="assets/Fachada T3.jpg.jpeg">
+                <span>PROJECTO</span>
+            </div>
+
+            <div class="image-card">
+                <img src="assets/Obra.jpg.jpeg">
+                <span>EXECUÇÃO</span>
+            </div>
 
                 <div class="image-card">
-                    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1000">
-                    <span>PROJECTO</span>
-                </div>
-
-                <div class="image-card">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1000">
-                    <span>EXECUÇÃO</span>
-                </div>
-
-                <div class="image-card">
-                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1000">
+                    <img src="assets/Projecto.jpg.jpeg">
                     <span>ENTREGA</span>
                 </div>
 
@@ -554,13 +563,13 @@
         <!-- LADO DIREITO — IMAGENS -->
         <div class="proj-images">
             <div class="proj-img">
-                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=600" alt="Projecto 1">
+                <img src="assets/524376102_18063709838186534_8015824104641259766_n.jpg.jpeg" alt="Projecto 1">
             </div>
             <div class="proj-img">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=600" alt="Projecto 2">
+                <img src="assets/1759562175080.jpg.jpeg" alt="Projecto 2">
             </div>
             <div class="proj-img">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600" alt="Projecto 3">
+                <img src="assets/Projecto.jpg.jpeg" alt="Projecto 3">
             </div>
            
         </div>
@@ -670,27 +679,35 @@
         <div class="qual-form-box">
 
             <!-- ESQUERDA -->
-            <div class="qual-left">
+           <!-- ESQUERDA -->
+<div class="qual-left">
 
-                <div class="qual-field-group">
-                    <label>Nome completo <span>*</span></label>
-                    <input type="text" name="nome" placeholder="Digite seu nome">
-                </div>
+    <p class="qual-left-title">DADOS BÁSICOS</p>
 
-                <div class="qual-field-group">
-                    <label>Número de telefone <span>*</span></label>
-                    <input type="tel" name="telefone" placeholder="Ex: +258 84 000 0000">
-                </div>
+    <div class="qual-field-group">
+        <label>Nome completo <span>*</span></label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+    </div>
 
-                <div class="qual-field-group">
-                    <label>E-mail <span>*</span></label>
-                    <input type="email" name="email" placeholder="Digite seu e-mail">
-                </div>
+    <div class="qual-field-group">
+        <label>Número de telefone <span>*</span></label>
+        <input type="tel" name="telefone" placeholder="Ex: +258 84 000 0000">
+    </div>
 
-            </div>
+    <div class="qual-field-group">
+        <label>E-mail <span>*</span></label>
+        <input type="email" name="email" placeholder="Digite seu e-mail">
+    </div>
+
+</div>
 
             <!-- DIREITA -->
             <div class="qual-right">
+                <div style="grid-column: 1 / -1; padding-bottom: 14px; border-bottom: 1px solid #eee; margin-bottom: 6px;">
+    <p style="font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #111;">
+        Sobre o Projecto
+    </p>
+</div>
 
                 <div class="qf-group">
                     <label>1. Qual serviço pretende contratar? <span>*</span></label>
@@ -812,6 +829,28 @@
                 </div>
 
                 <!-- VISÃO -->
+                            <div class="qf-group" style="grid-column: 1 / -1;">
+                    <div style="
+                        background: #f0ece3;
+                        border-left: 4px solid var(--gold);
+                        border-radius: 8px;
+                        padding: 22px 24px;
+                        margin-bottom: 8px;
+                    ">
+                        <p style="font-size:15px; font-weight:800; color:#111; margin-bottom:10px;">
+                            3. A sua visão para este projecto
+                        </p>
+                        <p style="font-size:14px; font-weight:700; color:#111; margin-bottom:8px;">
+                            Este é um dos campos mais importantes da análise.
+                        </p>
+                        <p style="font-size:13px; color:#555; line-height:1.7;">
+                            Reserve pelo menos 5 minutos para responder com atenção e detalhadamente. 
+                            Quanto mais claras forem as suas respostas, mais estratégica, precisa e 
+                            personalizada será a nossa avaliação do seu projecto.
+                        </p>
+                    </div>
+                </div>
+
                 <div class="qf-group">
                     <label>13. O que motivou a realização deste projecto neste momento?</label>
                     <textarea name="motivacao"></textarea>
