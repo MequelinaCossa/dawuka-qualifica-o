@@ -64,6 +64,10 @@ if (qualForm) {
     submitBtn.innerHTML = 'QUERO SER ANALISADO PELA EQUIPA';
     const modal = document.getElementById('formSuccess');
     modal.style.display = 'flex';
+
+     if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+    }
 })
             .catch((error) => {
                 submitBtn.disabled = false;
