@@ -35,6 +35,22 @@
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <!-- Estilos de apoio para os botões de CTA estratégicos (não interfere com style.css) -->
+    <style>
+        .cta-strategic-wrap{
+            width:100%;
+            display:flex;
+            justify-content:center;
+            margin-top:36px;
+        }
+        .cta-strategic-btn{
+            display:inline-flex;
+            align-items:center;
+            gap:10px;
+            cursor:pointer;
+        }
+    </style>
 </head>
 <body>
 
@@ -51,7 +67,7 @@
             <a href="#sobre">SOBRE</a>
             <a href="#projectos">PROJECTOS</a>
             <a href="#processo">PROCESSO</a>
-            <a href="#contacto">CONTACTO</a>
+            <a href="#contacto" onclick="mostrarDadosBasicos(event)">CONTACTO</a>
         </div>
 
         <div class="call-now">
@@ -64,7 +80,7 @@
             </div>
         </div>
 
-        <a href="#contacto" class="header-btn">
+        <a href="#contacto" class="header-btn" onclick="mostrarDadosBasicos(event)">
             SOLICITAR ANÁLISE
         </a>
 
@@ -83,7 +99,7 @@
         <a href="#sobre" onclick="toggleMenu()">SOBRE</a>
         <a href="#projectos" onclick="toggleMenu()">PROJECTOS</a>
         <a href="#processo" onclick="toggleMenu()">PROCESSO</a>
-        <a href="#contacto" onclick="toggleMenu()">SOLICITAR ANÁLISE</a>
+        <a href="#contacto" onclick="toggleMenu(); mostrarDadosBasicos(event)">SOLICITAR ANÁLISE</a>
     </nav>
 
 </header>
@@ -114,7 +130,7 @@
 
                 <div class="hero-buttons">
 
-                   <a href="#contacto" class="btn-primary">
+                   <a href="#contacto" class="btn-primary" onclick="mostrarDadosBasicos(event)">
                         QUERO UMA ANÁLISE DO MEU PROJECTO
                     </a>
 
@@ -177,6 +193,12 @@
 
             </div>
 
+            <div class="cta-strategic-wrap">
+                <a href="#contacto" class="btn-primary cta-strategic-btn" onclick="mostrarDadosBasicos(event)">
+                    QUERO UMA ANÁLISE DO MEU PROJECTO
+                </a>
+            </div>
+
         </div>
 
     </section>
@@ -217,6 +239,12 @@
                         aceitando apenas projectos que conseguimos acompanhar com
                         excelência do início ao fim.
                     </p>
+                </div>
+
+                <div class="cta-strategic-wrap" style="justify-content:flex-start; margin-top:24px;">
+                    <a href="#contacto" class="btn-primary cta-strategic-btn" onclick="mostrarDadosBasicos(event)">
+                        SOLICITAR ANÁLISE DO MEU PROJECTO
+                    </a>
                 </div>
 
             </div>
@@ -330,6 +358,13 @@
             </div>
 
         </div>
+
+        <div class="cta-strategic-wrap">
+            <a href="#contacto" class="btn-primary cta-strategic-btn" onclick="mostrarDadosBasicos(event)">
+                QUERO INICIAR O MEU PROJECTO
+            </a>
+        </div>
+
     </div>
 </section>
 
@@ -418,6 +453,13 @@
             </div>
 
         </div>
+
+        <div class="cta-strategic-wrap">
+            <a href="#contacto" class="btn-primary cta-strategic-btn" onclick="mostrarDadosBasicos(event)">
+                SOLICITAR ANÁLISE DA MINHA OBRA
+            </a>
+        </div>
+
     </div>
 </section>
 
@@ -460,6 +502,12 @@
                     <i class="fas fa-crown"></i>
                 </div>
                 <p>PROJECTOS SELECCIONADOS TÊM PRIORIDADE DE EXECUÇÃO E ACOMPANHAMENTO</p>
+            </div>
+
+            <div class="cta-strategic-wrap" style="justify-content:flex-start;">
+                <a href="#contacto" class="btn-primary cta-strategic-btn" onclick="mostrarDadosBasicos(event)">
+                    GARANTIR A MINHA VAGA
+                </a>
             </div>
  
         </div>
@@ -529,6 +577,12 @@
             </div>
  
         </div>
+
+        <div class="cta-strategic-wrap">
+            <a href="#contacto" class="btn-primary cta-strategic-btn" onclick="mostrarDadosBasicos(event)">
+                EVITAR ESTES PROBLEMAS NO MEU PROJECTO
+            </a>
+        </div>
  
     </div>
 </section>
@@ -576,6 +630,12 @@
                     <p>Projectos personalizados</p>
                 </div>
  
+            </div>
+
+            <div class="cta-strategic-wrap" style="justify-content:flex-start;">
+                <a href="#contacto" class="btn-primary cta-strategic-btn" onclick="mostrarDadosBasicos(event)">
+                    QUERO O MEU PROJECTO ASSIM
+                </a>
             </div>
         </div>
  
@@ -687,10 +747,15 @@
             </div>
  
         </div>
+
+        <div class="cta-strategic-wrap">
+            <a href="#contacto" class="btn-primary cta-strategic-btn" onclick="mostrarDadosBasicos(event)">
+                QUERO SER O PRÓXIMO CLIENTE SATISFEITO
+            </a>
+        </div>
+
     </div>
 </section>
-
-<form id="contact-form">
 
 <section class="qualification" id="contacto">
     <div class="container">
@@ -703,219 +768,272 @@
             Preenchemos vagas limitadas mensalmente. Por isso analisamos cada projecto antes de avançar.
         </p>
 
-        <div class="qual-form-box">
+        <!-- INDICADOR DE ETAPAS -->
+        <div class="qual-steps-indicator">
+            <div class="step-dot active" id="stepDot1">1. Dados Básicos</div>
+            <div class="step-dot" id="stepDot2">2. Sobre o Projecto</div>
+        </div>
 
-            <!-- ESQUERDA -->
-            <div class="qual-left">
+        <!-- ===================== ETAPA 1: DADOS BÁSICOS ===================== -->
+        <form id="dados-basicos-form" class="qual-step-form active">
 
-                <p class="qual-left-title">DADOS BÁSICOS</p>
+            <div class="qual-form-box qual-form-box-single">
 
-                <div class="qual-field-group">
-                    <label>Nome completo <span>*</span></label>
-                    <input type="text" name="nome" placeholder="Digite seu nome" required>
-                </div>
+                <div class="qual-left" style="width:100%; max-width:520px; margin:0 auto;">
 
-                <div class="qual-field-group">
-                    <label>Número de telefone <span>*</span></label>
-                    <input type="tel" name="telefone" placeholder="Ex: +258 84 000 0000" required>
-                </div>
+                    <p class="qual-left-title">DADOS BÁSICOS</p>
 
-                <div class="qual-field-group">
-                    <label>E-mail <span>*</span></label>
-                    <input type="email" name="email" placeholder="Digite seu e-mail" required>
+                    <div class="qual-field-group">
+                        <label>Nome completo <span>*</span></label>
+                        <input type="text" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="qual-field-group">
+                        <label>Número de telefone <span>*</span></label>
+                        <input type="tel" name="telefone" placeholder="Ex: +258 84 000 0000" required>
+                    </div>
+
+                    <div class="qual-field-group">
+                        <label>E-mail <span>*</span></label>
+                        <input type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="qual-action-col">
+                        <button type="submit" class="submit-btn" id="submitBtnStep1">
+                            CONTINUAR
+                        </button>
+                    </div>
+
                 </div>
 
             </div>
+        </form>
 
-            <!-- DIREITA -->
-            <div class="qual-right">
-                <div style="grid-column: 1 / -1; padding-bottom: 14px; border-bottom: 1px solid #eee; margin-bottom: 6px;">
-                    <p style="font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #111;">
-                        Sobre o Projecto
-                    </p>
-                </div>
+        <!-- ===================== ETAPA 2: SOBRE O PROJECTO / VISÃO ===================== -->
+        <form id="projeto-form" class="qual-step-form" style="display:none;">
 
-                <div class="qf-group">
-                    <label>1. Qual serviço pretende contratar? <span>*</span></label>
-                    <select name="servico" required>
-                        <option value="">Selecione...</option>
-                        <option>Projecto Arquitectónico</option>
-                        <option>Projecto + Construção</option>
-                        <option>Orçamento da Obra apenas</option>
-                        <option>Fiscalização da Obra</option>
-                    </select>
-                </div>
+            <div class="qual-single-form">
 
-                <div class="qf-group">
-                    <label>2. Que tipo de projecto pretende desenvolver? <span>*</span></label>
-                    <select name="tipo_projecto" required>
-                        <option value="">Selecione...</option>
-                        <option>Moradia Unifamiliar</option>
-                        <option>Moradia Plurifamiliar</option>
-                        <option>Condomínio</option>
-                        <option>Edifício Comercial</option>
-                        <option>Reabilitação/Ampliação</option>
-                        <option>Outro</option>
-                    </select>
-                </div>
+                <p class="qual-left-title">2. SOBRE O PROJECTO/OBRA</p>
 
-                <div class="qf-group">
-                    <label>3. Quantos pisos pretende construir? <span>*</span></label>
-                    <select name="pisos" required>
-                        <option value="">Selecione...</option>
-                        <option>Térreo</option>
-                        <option>Térreo + 1 Andar</option>
-                        <option>Térreo + 2 Andares</option>
-                        <option>Térreo + 3 Andares ou mais</option>
-                    </select>
-                </div>
-
-                <div class="qf-group">
-                    <label>4. Já possui terreno? <span>*</span></label>
-                    <select name="terreno" required>
-                        <option value="">Selecione...</option>
-                        <option>Sim</option>
-                        <option>Não</option>
-                    </select>
-                </div>
-
-                <div class="qf-group">
-                    <label>5. Localização do terreno <span>*</span></label>
-                    <input type="text" name="localizacao" placeholder="Digite a localização" required>
-                </div>
-
-                <div class="qf-group">
-                    <label>6. Descreva a compartimentação do seu projecto <span>*</span></label>
-                    <input type="text" name="compartimentacao" placeholder="Ex: Quantidade de quartos, salas, área de lazer, etc." required>
-                </div>
-
-                <div class="qf-group">
-                    <label>7. Qual o orçamento previsto para o PROJECTO? <span>*</span></label>
-                    <select name="orcamento_projeto" required>
-                        <option value="">Selecione...</option>
-                        <option>Menos de 20.000 MT</option>
-                        <option>20.000 MT – 30.000 MT</option>
-                        <option>30.000 MT – 50.000 MT</option>
-                        <option>50.000 MT – 100.000 MT</option>
-                        <option>Acima de 100.000 MT</option>
-                    </select>
-                </div>
-
-                <div class="qf-group">
-                    <label>8. Qual o orçamento previsto para a OBRA? <span>*</span></label>
-                    <select name="orcamento_obra" required>
-                        <option value="">Selecione...</option>
-                        <option>Menos de 1.000.000 MT</option>
-                        <option>1.000.000 MT – 2.000.000 MT</option>
-                        <option>2.000.000 MT – 3.500.000 MT</option>
-                        <option>3.500.000 MT – 5.000.000 MT</option>
-                        <option>Acima de 5.000.000 MT</option>
-                    </select>
-                </div>
-
-                <div class="qf-group">
-                    <label>9. Já possui o investimento necessário para o Projecto? <span>*</span></label>
-                    <select name="investimento_projeto" required>
-                        <option value="">Selecione...</option>
-                        <option>Sim</option>
-                        <option>Parcialmente</option>
-                        <option>Ainda não tenho o investimento</option>
-                    </select>
-                </div>
-
-                <div class="qf-group">
-                    <label>10. Já possui o investimento necessário para a Construção/Obra? <span>*</span></label>
-                    <select name="investimento_obra" required>
-                        <option value="">Selecione...</option>
-                        <option>Sim</option>
-                        <option>Parcialmente</option>
-                        <option>Ainda não tenho o investimento</option>
-                    </select>
-                </div>
-
-                <div class="qf-group">
-                    <label>11. Qual o nível de urgência? <span>*</span></label>
-                    <select name="urgencia" required>
-                        <option value="">Selecione...</option>
-                        <option>Alto</option>
-                        <option>Médio</option>
-                        <option>Baixo</option>
-                    </select>
-                </div>
-
-                <div class="qf-group">
-                    <label>12. Quando pretende iniciar? <span>*</span></label>
-                    <select name="inicio" required>
-                        <option value="">Selecione...</option>
-                        <option>Imediatamente</option>
-                        <option>1 a 2 meses</option>
-                        <option>3 a 4 meses</option>
-                        <option>Ainda em fase de preparação</option>
-                    </select>
-                </div>
-
-                <!-- VISÃO -->
-                <div class="qf-group" style="grid-column: 1 / -1;">
-                    <div style="
-                        background: #f0ece3;
-                        border-left: 4px solid var(--gold);
-                        border-radius: 8px;
-                        padding: 22px 24px;
-                        margin-bottom: 8px;
-                    ">
-                        <p style="font-size:15px; font-weight:800; color:#111; margin-bottom:10px;">
-                            3. A sua visão para este projecto
-                        </p>
-                        <p style="font-size:14px; font-weight:700; color:#111; margin-bottom:8px;">
-                            Este é um dos campos mais importantes da análise.
-                        </p>
-                        <p style="font-size:13px; color:#555; line-height:1.7;">
-                            Reserve pelo menos 5 minutos para responder com atenção e detalhadamente. 
-                            Quanto mais claras forem as suas respostas, mais estratégica, precisa e 
-                            personalizada será a nossa avaliação do seu projecto.
-                        </p>
+                <div class="qual-field-group">
+                    <label>1. Qual serviço pretende contratar?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="servico" id="servico-1" value="Projecto Arquitectónico">
+                            <label for="servico-1">Projecto Arquitectónico</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="servico" id="servico-2" value="Construção">
+                            <label for="servico-2">Construção</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="servico" id="servico-3" value="Projecto + Construção">
+                            <label for="servico-3">Projecto + Construção</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="servico" id="servico-4" value="Fiscalização de Obra">
+                            <label for="servico-4">Fiscalização de Obra</label>
+                        </div>
                     </div>
                 </div>
 
-                <div class="qf-group">
-                    <label>13. O que motivou a realização deste projecto neste momento? <span>*</span></label>
-                    <textarea name="motivacao" required></textarea>
+                <div class="qual-field-group">
+                    <label>2. Que tipo de projecto pretende desenvolver?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="tipo_projecto" id="tipo-1" value="Moradia Unifamiliar">
+                            <label for="tipo-1">Moradia Unifamiliar</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="tipo_projecto" id="tipo-2" value="Moradia Multifamiliar">
+                            <label for="tipo-2">Moradia Multifamiliar</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="tipo_projecto" id="tipo-3" value="Condomínio">
+                            <label for="tipo-3">Condomínio</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="tipo_projecto" id="tipo-4" value="Edifício Comercial">
+                            <label for="tipo-4">Edifício Comercial</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="tipo_projecto" id="tipo-5" value="Reabilitação/Ampliação">
+                            <label for="tipo-5">Reabilitação/Ampliação</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="tipo_projecto" id="tipo-6" value="Outro">
+                            <label for="tipo-6">Outro</label>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="qf-group">
-                    <label>14. Como imagina o resultado final deste projecto? <span>*</span></label>
-                    <textarea name="visao_final" required></textarea>
+                <div class="qual-field-group">
+                    <label>3. Quantos pisos pretende construir?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="pisos" id="pisos-1" value="Térreo">
+                            <label for="pisos-1">Térreo</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="pisos" id="pisos-2" value="Térreo + 1 Andar">
+                            <label for="pisos-2">Térreo + 1 Andar</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="pisos" id="pisos-3" value="Térreo + 2 Andar">
+                            <label for="pisos-3">Térreo + 2 Andar</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="pisos" id="pisos-4" value="Térreo + 3 Andares ou mais">
+                            <label for="pisos-4">Térreo + 3 Andares ou mais</label>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="qf-group">
-                    <label>15. O que seria indispensável para considerar este projecto perfeito para si? <span>*</span></label>
-                    <textarea name="indispensavel" required></textarea>
+                <div class="qual-field-group">
+                    <label>4. Já possui terreno?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="terreno" id="terreno-1" value="Sim">
+                            <label for="terreno-1">Sim</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="terreno" id="terreno-2" value="Não">
+                            <label for="terreno-2">Não</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="terreno" id="terreno-3" value="Estou em processo de compra">
+                            <label for="terreno-3">Estou em processo de compra</label>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="qf-group">
-                    <label>16. Porque acha importante contratar uma empresa para fazer esse trabalho? <span>*</span></label>
-                    <textarea name="porque_empresa" required></textarea>
+                <div class="qual-field-group">
+                    <label>5. Localização do terreno</label>
+                    <input type="text" name="localizacao" placeholder="Digite a localização">
                 </div>
 
-                <div class="qf-group">
-                    <label>17. Quais são as maiores preocupações que tem em relação à construção ou desenvolvimento deste projecto? <span>*</span></label>
-                    <textarea name="preocupacoes" required></textarea>
+                <div class="qual-field-group">
+                    <label>6. Descreva o seu projecto</label>
+                    <input type="text" name="descricao_projecto" placeholder="Ex: T3 com suíte, cozinha americana, sala de jantar, etc.">
                 </div>
 
-                <div class="qf-group">
-                    <label>18. O que gostaria de evitar durante este processo? <span>*</span></label>
-                    <textarea name="evitar" required></textarea>
+                <div class="qual-field-group">
+                    <label>7. Qual é o investimento previsto para o projecto?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="orcamento_projeto" id="orcp-1" value="Menos de 20.000 MT">
+                            <label for="orcp-1">Menos de 20.000 MT</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="orcamento_projeto" id="orcp-2" value="20.000 MT – 50.000 MT">
+                            <label for="orcp-2">20.000 MT – 50.000 MT</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="orcamento_projeto" id="orcp-3" value="50.000 MT – 100.000 MT">
+                            <label for="orcp-3">50.000 MT – 100.000 MT</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="orcamento_projeto" id="orcp-4" value="Acima de 100.000 MT">
+                            <label for="orcp-4">Acima de 100.000 MT</label>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="qf-group">
-                    <label>19. Se este projecto fosse executado exactamente como imagina, o que isso representaria para si? <span>*</span></label>
-                    <textarea name="impacto" required></textarea>
+                <div class="qual-field-group">
+                    <label>8. Qual é o investimento previsto para a obra?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="orcamento_obra" id="orco-1" value="Menos de 1.000.000 MT">
+                            <label for="orco-1">Menos de 1.000.000 MT</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="orcamento_obra" id="orco-2" value="1.000.000 MT – 2.000.000 MT">
+                            <label for="orco-2">1.000.000 MT – 2.000.000 MT</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="orcamento_obra" id="orco-3" value="2.000.000 MT – 3.500.000 MT">
+                            <label for="orco-3">2.000.000 MT – 3.500.000 MT</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="orcamento_obra" id="orco-4" value="Acima de 3.500.000 MT">
+                            <label for="orco-4">Acima de 3.500.000 MT</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="orcamento_obra" id="orco-5" value="Ainda não defini">
+                            <label for="orco-5">Ainda não defini</label>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="qf-group">
-                    <label>20. Existe alguma informação importante sobre este projecto que gostaria que a nossa equipa soubesse antes da análise? <span>*</span></label>
-                    <textarea name="info_extra" required></textarea>
+                <div class="qual-field-group">
+                    <label>9. Quando pretende iniciar o projecto/obra?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="inicio" id="inicio-1" value="Imediatamente">
+                            <label for="inicio-1">Imediatamente</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="inicio" id="inicio-2" value="Nos próximos 30 dias">
+                            <label for="inicio-2">Nos próximos 30 dias</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="inicio" id="inicio-3" value="Entre 1 e 3 meses">
+                            <label for="inicio-3">Entre 1 e 3 meses</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="inicio" id="inicio-4" value="Entre 3 e 6 meses">
+                            <label for="inicio-4">Entre 3 e 6 meses</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="inicio" id="inicio-5" value="Apenas estou a pesquisar">
+                            <label for="inicio-5">Apenas estou a pesquisar</label>
+                        </div>
+                    </div>
                 </div>
+
+                <button type="button" class="back-to-basics-btn" onclick="voltarDadosBasicos()">
+                    <i class="fa-solid fa-arrow-left"></i> Voltar aos dados básicos
+                </button>
+
+                <div class="qual-section-divider">
+                    <p class="qual-left-title">3. A SUA VISÃO PARA ESTE PROJECTO</p>
+                </div>
+
+                <div class="qual-field-group qual-highlight-box">
+                    <p style="font-size:14px; font-weight:700; color:#111; margin-bottom:8px;">
+                        Este é um dos campos mais importantes da análise.
+                    </p>
+                    <p style="font-size:13px; color:#555; line-height:1.7; margin:0;">
+                        Reserve pelo menos 5 minutos para responder com atenção e detalhadamente.
+                        Quanto mais claras forem as suas respostas, mais estratégica, precisa e
+                        personalizada será a nossa avaliação do seu projecto.
+                    </p>
+                </div>
+
+                <div class="qual-field-group">
+                    <label>10. O que motivou a realização deste projecto/obra neste momento?</label>
+                    <textarea name="motivacao"></textarea>
+                </div>
+
+                <div class="qual-field-group">
+                    <label>11. O que seria indispensável para considerar este projecto/obra perfeito para si?</label>
+                    <textarea name="indispensavel"></textarea>
+                </div>
+
+                <div class="qual-field-group">
+                    <label>12. Quais são as suas maiores preocupações ou receios em relação a este projecto/obra?</label>
+                    <textarea name="preocupacoes"></textarea>
+                </div>
+
+                <div class="qual-field-group">
+                    <label>13. Quem participará na decisão e aprovação deste projecto/obra?</label>
+                    <textarea name="quem_participa"></textarea>
+                </div>
+
+                <button type="button" class="back-to-basics-btn" onclick="voltarDadosBasicos()">
+                    <i class="fa-solid fa-arrow-left"></i> Voltar aos dados básicos
+                </button>
 
                 <div class="qual-action-col">
                     <button type="submit" class="submit-btn" id="submitBtn">
@@ -924,13 +1042,52 @@
                 </div>
 
             </div>
-        </div>
+        </form>
 
     </div>
 </section>
+<!-- MODAL: DADOS BÁSICOS ENVIADOS -->
+<div id="step1Success" style="
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.75);
+    z-index:9999;
+    align-items:center;
+    justify-content:center;
+">
+    <div style="
+        background:#fff;
+        border-radius:14px;
+        padding:50px 40px;
+        max-width:460px;
+        width:90%;
+        text-align:center;
+        position:relative;
+    ">
+        <div style="font-size:52px; margin-bottom:16px;">✅</div>
+        <h3 style="font-size:22px; font-weight:800; color:#111; margin-bottom:12px;">
+            Dados enviados!
+        </h3>
+        <p style="color:#666; font-size:14px; line-height:1.7; margin-bottom:30px;">
+            Recebemos os seus dados de contacto. Agora conte-nos um pouco mais sobre o seu projecto.
+        </p>
+        <button onclick="fecharStep1Modal()" style="
+            background:#d4a437;
+            color:#000;
+            border:none;
+            padding:14px 32px;
+            font-weight:800;
+            font-size:13px;
+            border-radius:8px;
+            cursor:pointer;
+            text-transform:uppercase;
+            letter-spacing:0.5px;
+        ">CONTINUAR</button>
+    </div>
+</div>
 
-</form>
-<!-- MODAL SUCESSO -->
+<!-- MODAL SUCESSO FINAL -->
 <div id="formSuccess" style="
     display:none;
     position:fixed;
@@ -993,6 +1150,12 @@
                     <strong>Construímos mais do que edifícios.</strong>
                     Construímos confiança, segurança e resultados que permanecem.
                 </p>
+
+                <div class="cta-strategic-wrap" style="justify-content:flex-start; margin-top:20px;">
+                    <a href="#contacto" class="header-btn cta-strategic-btn" onclick="mostrarDadosBasicos(event)">
+                        SOLICITAR ANÁLISE
+                    </a>
+                </div>
  
             </div>
         </div>
@@ -1090,6 +1253,34 @@
     <!-- JS -->
     <script src="script.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Botões de CTA estratégicos: garantem que a secção de contacto sempre abre na aba "Dados Básicos" -->
+    <script>
+        function mostrarDadosBasicos(e) {
+            if (e && e.preventDefault) e.preventDefault();
+
+            var step1 = document.getElementById('dados-basicos-form');
+            var step2 = document.getElementById('projeto-form');
+            var dot1 = document.getElementById('stepDot1');
+            var dot2 = document.getElementById('stepDot2');
+
+            if (step1) {
+                step1.style.display = 'block';
+                step1.classList.add('active');
+            }
+            if (step2) {
+                step2.style.display = 'none';
+                step2.classList.remove('active');
+            }
+            if (dot1) dot1.classList.add('active');
+            if (dot2) dot2.classList.remove('active');
+
+            var alvo = document.getElementById('contacto');
+            if (alvo) {
+                alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    </script>
 
 </body>
 </html>
